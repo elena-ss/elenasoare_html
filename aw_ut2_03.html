@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>aw_ut2_03</title>
+    </head>
+<body background="imagenes/colorbackground.png">
+        <h1 align="center">¿Cuánto sabes sobre Tarot?</h1>
+    <!----Inicio de formulario---->
+        <form action="formulario procesa/procesa.html" method="post" enctype="multipart/form-data"> 
+            <!---Inputs básicos con fieldset 1---->
+            <fieldset>    
+                <legend>1.Datos personales</legend>
+                        Localidad: <input type="text" name="Local" value="Orihuela" size="9" readonly="readonly"/>
+                        <input type="hidden" name="comunidad" value="Orihuela" />
+                        <br/>
+                        Indique su nombre: <input type="text" placeholder="Indique su nombre" name="nombre" size="45" required="required" tabindex="1"/>
+                        Indique su edad: <input type="num" size="1" name="edad"/>
+                        <br/>
+                        Indique su contraseña: <input type="password" name="contraseña" size="9" maxlength="8"/>
+                        <br/>
+                        Indique su correo electrónico: <input type="email" name="correo" size="55" placeholder="Indique su correo electrónico" accesskey="k"/>
+                        <br/>
+                         <br/>
+                        Escriba su opinión sobre el tarot:
+                        <br/>
+                        <textarea rows="6" cols="30" name="opinion">Escribe aquí 
+                        </textarea>
+            </fieldset>    
+            <br/>
+            <!----Fieldset 2 con radio y checkbox----> 
+            <fieldset>
+                    <legend>2.Opinión</legend>
+                        <!---Uso de botones de radio--->
+                            <p>Has visto mis 5 tarots más personales cual de todos te ha gustado más gráficamente</p>
+                            Elige:
+                            <br/>
+                            <input type="radio" name="tarot" value="vampiros"/>Tarot de los Vampiros
+                            <br/>
+                            <input type="radio" name="tarot" value="magia gitana"/>Tarot Magia Gitana
+                            <br/>
+                            <input type="radio" name="tarot" value="dragones"/>Tarot de los Dragones
+                            <br/>
+                            <input type="radio" name="tarot" value="demonios"/>Occult Tarot
+                            <br/>
+                            <input type="radio" name="tarot" value="oraculoluna"/>Oráculo de la Luna
+                        <!----Lista de opciones--->    
+                            <p>¿Qué cartas especiales te han gustado más (elige cuantas quieras)?</p>
+                            <select multiple="multiple" name="elige" size="4">
+                                    <option>Azrael</option>
+                                    <option>Lilith</option>
+                                    <option>El Cupido</option>
+                                    <option>El Mundo</option>
+                                    <option>El Diablo</option>
+                            </select>
+                        <!-----Uso de checkbox---->    
+                            <p>¿Alguna vez te han leído el futuro con el tarot?</p>
+                            <input type="checkbox" name="futuro" value="si"/> Sí
+                            <br/>
+                            <input type="checkbox" name="futuro" value="no"/> No
+                            <p>Si es que no ¿Te gustaría?</p>
+                            <input type="checkbox" name="gustar" value="si"/> Sí
+                            <input type="checkbox" name="gustar" value="no"/> No
+                            <input type="checkbox" name="gustar" value="oj"/> Ojála
+                            <input type="checkbox" name="gustar" value="nu"/> Nunca
+                        <!----Lista de opciones--->    
+                        <p>¿Que Sol te ha gustado más de todos los tarots?</p>
+                        <select name="elige" size="4">
+                                <optgroup label="El Sol">
+                                    <option>Tarot de los Vampiros </option>
+                                    <option>Tarot Magia Gitana</option>
+                                    <option>Tarot de los Dragones</option>
+                                    <option>Occult Tarot</option>
+                                    <option>Oráculo de la Luna</option>
+                                </optgroup>
+                        </select>    
+            </fieldset> 
+            <!--Fieldset 3-->
+            <fieldset>
+                    <legend>3.Reseña</legend>
+                    <!--Este input está sacado de Internet quiero hacer las reseñas con estrellas -->
+                        <p>Danos tu reseña:</p>
+                            <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                            --><label for="radio1">★</label><!--
+                            --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                            --><label for="radio2">★</label><!--
+                            --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                            --><label for="radio3">★</label><!--
+                            --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                            --><label for="radio4">★</label><!--
+                            --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                            --><label for="radio5">★</label>
+                         <br/>
+                         <p>Por si prefieres escribir:</p>   
+                    <!--Textarea--> 
+                        <textarea rows="8" cols="40" name="opinion">Escribe aquí 
+                        </textarea>
+                        <br/>
+                    <!--Botones-->
+                        <input type="submit" name="submit" value="Enviar formulario">
+                        <input type="reset" name="reset" value="Borrar">    
+                        <br/>
+                        <br/>   
+                       <button type="button"  onClick="javascript:alert('Tarot Magia Gitana=14,25€\nTarot de los Vampiros=24,95€\nTarot de los dragones=19,95€\nOráculo de la Luna=23,95€\nOccult Tarot=27,52€')">Ver precios
+                            <img src="formulario procesa/precios.png" width="50" height="50" />
+                       </button>    
+            </fieldset>
+            <br/>
+            <!---Enlaces a las páginas--->
+                <a href="index.html"><img src="imagenes/raiderwaite.jpg" alt="imagen tarot" width="200" height="300"></a> 
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="aw_ut2_02.html"><img src="imagenes/mapa.jpg" alt="imagen mapa" width="200" height="300"></a>
+        </form>    
+</body>
+</html>    
